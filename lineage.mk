@@ -17,7 +17,7 @@
 $(call inherit-product, device/lenovo/k5fpr/device_k5fpr.mk)
 
 # Inherit some common lineage stuff.
-$(call inherit-product, vendor/viper/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -27,7 +27,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
 PRODUCT_DEVICE := k5fpr
-PRODUCT_NAME := viper_k5fpr
+PRODUCT_NAME := lineage_k5fpr
 PRODUCT_BRAND := Lenovo
 PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_MODEL := Lenovo A7010a48

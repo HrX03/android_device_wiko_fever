@@ -1,0 +1,19 @@
+diff --git a/src/java/com/android/internal/telephony/GsmCdmaPhone.java b/src/java/com/android/internal/telephony/GsmCdmaPhone.java
+index 2a94fc5..a29ad3f 100644
+--- a/src/java/com/android/internal/telephony/GsmCdmaPhone.java
++++ b/src/java/com/android/internal/telephony/GsmCdmaPhone.java
+@@ -2152,7 +2152,11 @@ public class GsmCdmaPhone extends Phone {
+             // Complete pending USSD
+ 
+             if (isUssdRelease) {
+-                found.onUssdRelease();
++                // directly call ussdfinsh
++                    found.onUssdFinished(ussdMessage, isUssdRequest);
++                // old code:
++                    found.onUssdRelease();
++                // end
+             } else if (isUssdError) {
+                 found.onUssdFinishedError();
+             } els
+-- 
+2.7.4

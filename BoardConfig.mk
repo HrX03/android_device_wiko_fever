@@ -44,7 +44,7 @@ TARGET_KERNEL_CONFIG := k5fpr_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 MTK_APPENDED_DTB_SUPPORT := yes
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_CMDLINE := 66bootopt=64S3,32N2,64N2 firmware_class.path=/system/vendor/firmware androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 firmware_class.path=/system/vendor/firmware androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_NAME := A7010a48
 
@@ -64,6 +64,9 @@ BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Gatekeeper
 BOARD_USE_SOFT_GATEKEEPER := true
+
+# Dex preoptimization
+WITH_DEXPREOPT := true
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true

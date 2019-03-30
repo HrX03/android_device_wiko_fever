@@ -14,6 +14,13 @@
 # limitations under the License.
 #
 LOCAL_PATH := device/lenovo/k5fpr
+
+# Gapps
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+GAPPS_VARIANT := nano
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_MATCHING_DPI := true
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
