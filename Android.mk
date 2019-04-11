@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_DEVICE),k5fpr)
+ifeq ($(TARGET_DEVICE),fever)
 
 LOCAL_PATH := $(call my-dir)
 

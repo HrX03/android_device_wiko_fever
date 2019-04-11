@@ -5,7 +5,7 @@ BOARD_GLOBAL_CFLAGS += -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 BOARD_GLOBAL_CFLAGS += -DMTK_HARDWARE
 
 # LineageOS
-BOARD_HARDWARE_CLASS := device/lenovo/k5fpr/lineagehw/
+BOARD_HARDWARE_CLASS := device/wiko/fever/lineagehw/
 
 # Graphics
 OVERRIDE_RS_DRIVER := libRSDriver_mtk.so

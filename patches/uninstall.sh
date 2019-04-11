@@ -10,9 +10,6 @@ cd ../..
 cd frameworks/base
 git reset --hard && git clean -fd
 cd ../..
-cd frameworks/opt/telephony
-git reset --hard && git clean -fd
-cd ../../..
 cd hardware/ril
 git reset --hard && git clean -fd
 cd ../..

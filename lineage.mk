@@ -13,8 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from A7010 device
-$(call inherit-product, device/lenovo/k5fpr/device_k5fpr.mk)
+# Inherit from fever device
+$(call inherit-product, device/wiko/fever/device_fever.mk)
 
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
@@ -24,17 +24,17 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_BOOTANIMATION_HALF_RES := true
 
-PRODUCT_GMS_CLIENTID_BASE := android-lenovo
+PRODUCT_GMS_CLIENTID_BASE := android-fever
 
-PRODUCT_DEVICE := k5fpr
-PRODUCT_NAME := lineage_k5fpr
-PRODUCT_BRAND := Lenovo
-PRODUCT_MANUFACTURER := Lenovo
-PRODUCT_MODEL := Lenovo A7010a48
-PRODUCT_RELEASE_NAME := k5fpr
+PRODUCT_DEVICE := fever
+PRODUCT_NAME := lineage_fever
+PRODUCT_BRAND := Wiko
+PRODUCT_MANUFACTURER := Wiko
+PRODUCT_MODEL := Wiko l5460
+PRODUCT_RELEASE_NAME := fever
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=k5fpr \
-    PRIVATE_BUILD_DESC="k5fpr-user 6.0 MRA58K A7010a48_S300_190315_ROW release-keys"
+    PRODUCT_NAME=fever \
+    PRIVATE_BUILD_DESC="full_l5460-user 6.0 MRA58K 1460597594 release-keys"
 
-BUILD_FINGERPRINT := Lenovo/k5fpr/A7010a48:6.0/MRA58K/RA7010a48_S300_190315_ROW.03151804:user/release-keys \
+BUILD_FINGERPRINT := WIKO/l5460/l5460:6.0/MRA58K/1460597594:user/release-keys \
