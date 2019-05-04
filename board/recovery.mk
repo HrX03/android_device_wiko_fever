@@ -3,7 +3,7 @@ BOARD_NO_SECURE_DISCARD := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.mt6735
 
 ifeq ($(RECOVERY_VARIANT), twrp)
 DEVICE_RESOLUTION := 1080x1920
@@ -20,7 +20,7 @@ TARGET_DISABLE_TRIPLE_BUFFERING := false
 
 # TWRP.fstab
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/recovery.fstab
+    $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/recovery.fstab
 
 # Time Zone data for Recovery
 PRODUCT_COPY_FILES += \

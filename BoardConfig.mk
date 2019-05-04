@@ -51,14 +51,6 @@ BOARD_NAME := l5460
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
-# LDPRELOAD
-TARGET_LDPRELOAD += libmtk_symbols.so
-
-# EGL
-BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
-USE_OPENGL_RENDERER := true
-BOARD_EGL_WORKAROUND_BUG_10194508 := true
-
 # Flags
 BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
@@ -82,7 +74,7 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_NO_BOOTLOADER := true
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/manifest.xml
 
 # Architecture
 ARCH := arm64
@@ -117,11 +109,19 @@ ARCH_ARM_HAVE_VFP := true
 # System.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
-# Shims
-TARGET_LD_SHIM_LIBS := /system/lib/libgui.so|/system/vendor/lib/libmtkshim_gui.so:/system/lib64/libgui.so|/system/vendor/lib64/libmtkshim_gui.so:/system/vendor/lib/hw/audio.primary.mt6753.so|/system/vendor/lib/libmtkshim_audio.so:/system/vendor/lib64/hw/audio.primary.mt6753.so|/system/vendor/lib64/libmtkshim_audio.so:/system/vendor/lib/libcam.camadapter.so|/system/vendor/lib/libmtkshim_camera.so:/system/vendor/lib64/libcam.camadapter.so|/system/vendor/lib64/libmtkshim_camera.so
+# Include needed symbols
+TARGET_INCLUDE_XLOG_SYMBOLS := true
+TARGET_INCLUDE_AUDIO_SYMBOLS := true
+TARGET_INCLUDE_UI_SYMBOLS := true
+TARGET_INCLUDE_GUI_SYMBOLS := true
+TARGET_INCLUDE_CAMERA_SYMBOLS := true
+include $(LOCAL_PATH)/symbols.mk
 
 # SELinux
 BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
+
+# LightHAL
+TARGET_PROVIDES_LIBLIGHT := true
 
 # Block based ota
 # see http://review.cyanogenmod.org/#/c/78849/1/core/Makefile

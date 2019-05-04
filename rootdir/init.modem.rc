@@ -12,4 +12,4 @@ on post-fs-data
     write /data/ccci_cfg/md_new_ver.1 "flag"
     chmod 0660 /data/ccci_cfg/md_new_ver.1
 
-setprop vold.post_fs_data_done 1
+    setprop vold.post_fs_data_done 1

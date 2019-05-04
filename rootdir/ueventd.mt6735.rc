@@ -111,4 +111,4 @@
 /dev/mtk_sched            0660   system     media
 
 # Fingerprint
-/dev/esfp0 0660 system system
+/dev/esfp0                0660   system     system
